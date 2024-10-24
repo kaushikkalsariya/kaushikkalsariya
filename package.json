@@ -1,10 +1,10 @@
 {
   "name": "12-nodejs_typescript",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "rm -rf build && tsc",
-    "start": "bun run build/app.js --watch",
+    "start": "node run build/app.js",
     "start:dev": "nodemon build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
