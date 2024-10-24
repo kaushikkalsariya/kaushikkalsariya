@@ -1,0 +1,23 @@
+{
+  "name": "12-nodejs_typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && tsc",
+    "start": "bun run build/app.js --watch",
+    "start:dev": "nodemon build/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "typescript": "^5.6.3"
+  }
+}
