@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response, Router } from "express";
-import { getAppName, uploadImage } from "../controllers";
+import { uploadImage } from "../controllers";
 import { upload } from "../helper/upload";
 
 const multerErrorHandling = (err: Error, req: Request, res: Response, next: NextFunction) => {
@@ -12,7 +12,6 @@ const multerErrorHandling = (err: Error, req: Request, res: Response, next: Next
 
 const router = Router();
 
-router.get('/', getAppName);
 // router.post('/', upload.any(), uploadImage);
 router.post('/', upload.single('media'), multerErrorHandling, uploadImage);
 // router.post('/', upload.array("media", 2), uploadImage);

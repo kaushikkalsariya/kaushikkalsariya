@@ -1,10 +1,6 @@
 import { Request, Response } from "express";
 import fs from "fs";
 
-export const getAppName = (req: Request, res: Response) => {
-    // req.user
-}
-
 export const uploadImage = (req: Request, res: Response) => {
     try {
         const fieldFiles = req.files as { [fieldname: string]: Express.Multer.File[] };
